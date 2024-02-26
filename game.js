@@ -18,6 +18,18 @@ var randomChoosenNumber;
       changeHeader(level);
     }
   });
+$(document).click(function (event) {
+    console.log(toggle);
+    if (toggle == true) {
+      $("h1").text("Press Any key to Start");
+      gamePattern = [];
+      nextSequence();
+      makeSound(btn_arr[randomChoosenNumber]);
+      level = 1;
+      toggle = false;
+      changeHeader(level);
+    }
+  });
 function gameOver(){
  $("h1").text("Game Over, Press Any Key to Restart");
   $("body").addClass("game-over");
